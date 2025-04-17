@@ -8,6 +8,7 @@
     --main-red: #be3144;
     --main-blue: #45567d;
     --main-gray: #303841;
+    --main-green: #355e3b;
 }
 
 html {
@@ -35,11 +36,18 @@ nav {
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
 
-ul {
+nav ul {
+    display: flex;
+    gap: 2rem;
     list-style: none;
 }
 
-#welcome-section {
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,4 +56,23 @@ ul {
     height: 100vh;
     background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.projects-section {
+    text-align: center;
+    padding:
+    10rem 2rem;
+    background: var(--main-green);
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
 }
