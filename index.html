@@ -16,9 +16,16 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <!-- TODO: finish welcome section -->
     <section id="welcome-section" class="welcome-section">
-        <h1>Hey, I'm</h1>
-        <p>a web developer</p>
+        <h1>Hi there, I'm <span class="highlight">Steven Brady</span></h1>
+        <p class="tagline">
+            A full-stack web developer in Springfield Oregon — turning ideas into pixel-perfect, accessible experiences.
+        </p>
+        <p class="skills">
+            JavaScript • React • HTML5 & CSS3 (Flexbox & Grid) • Node.js • REST APIs
+        </p>
+        <a href="#projects" class="btn btn-primary">See My Work </a>
     </section>
     <section id="projects" class="projects-section">
         <h2 class="projects-section-header">These are some of my projects</h2>
@@ -55,6 +62,10 @@
             <a class="btn contact-details" href="tel:541-735-5167">
                 <i class="fas fa-mobile-alt"></i>Call Me
             </a>
+            <button class="btn contact-details" onclick="navigator.clipboard.writeText('541-735-5167')">
+                <i class="far fa-copy"></i> Copy #
+              </button>
+            <span class="phone-text">541-735-5167</span>
         </div>
     </section>
 </body>
