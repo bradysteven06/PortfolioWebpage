@@ -1,7 +1,6 @@
 :root {
     --main-white: #f0f0f0;
     --main-red: #be3144;
-    --main-blue: #45567d;
     --main-gray: #303841;
     --main-green: #355e3b;
 }
@@ -259,4 +258,10 @@ img {
   
 .contact-details:hover {
     transform: translateY(8px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
 }
