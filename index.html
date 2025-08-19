@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Steven Brady — Full‑stack web developer in Springfield, Oregon. React, .NET, and modern web apps. Hire me for pixel‑perfect, accessible experiences.">
   <title>Steven Brady | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -13,7 +14,7 @@
         <ul class="nav-list">
             <li><a href="#welcome-section">About</a></li>
             <li><a href="#projects">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
     <!-- TODO: finish welcome section -->
@@ -25,7 +26,10 @@
         <p class="skills">
             JavaScript • React • HTML5 & CSS3 (Flexbox & Grid) • Node.js • REST APIs
         </p>
-        <a href="#projects" class="btn btn-primary">See My Work </a>
+        <div class="btn-group">
+            <a href="#projects" class="btn btn-primary">See My Work</a>
+            <a href="#contact" class="btn btn-cta btn-cta-ghost">Hire Me</a>
+        </div>
     </section>
     <section id="projects" class="projects-section">
         <h2 class="projects-section-header">These are some of my projects</h2>
@@ -64,9 +68,23 @@
             </a>
             <button class="btn contact-details" onclick="navigator.clipboard.writeText('541-735-5167')">
                 <i class="far fa-copy"></i> Copy #
-              </button>
+            </button>
             <span class="phone-text">541-735-5167</span>
         </div>
+        <div>
+            <span id="copy-feedback" class="copy-feedback" aria-live="polite"></span>
+        </div>
     </section>
+    <a href="#contact" class="floating-cta" aria-label="Hire Steven">Hire Me</a>
+    <script>
+        const copyBtn = document.querySelector('.contact-links button.btn.contact-details');
+        const feedback = document.getElementById('copy-feedback');
+        if (copyBtn && feedback) {
+            copyBtn.addEventListener('click', () => {
+            feedback.textContent = 'Phone number copied to clipboard.';
+            setTimeout(() => (feedback.textContent = ''), 2000);
+            });
+        }
+    </script>
 </body>
 </html>

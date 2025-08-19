@@ -58,7 +58,7 @@ html {
 /* Base styles */
 
 body {
-    font-family: 'Ariel', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.4;
@@ -108,7 +108,6 @@ img {
     display: flex;
     gap: 2rem;
     list-style: none;
-    font-size: 2.5rem;
 }
 
 @media (max-width: 28.75em) {
@@ -172,7 +171,7 @@ img {
     transition: transform 0.2s ease;
 }
   
-  .btn-primary:hover {
+.btn-primary:hover {
     transform: translateY(-3px);
 }
 
@@ -187,7 +186,7 @@ img {
     animation: bounce 2s infinite;
 }
   
-  @keyframes bounce {
+@keyframes bounce {
     0%, 100% { transform: translateY(-4px) rotate(45deg); }
     50%     { transform: translateY(4px) rotate(45deg); }
 }
@@ -283,10 +282,6 @@ img {
     }
 }
   
-  .contact-section-header > p {
-    font-style: italic;
-}
-  
 .contact-links {
     display: flex;
     justify-content: center;
@@ -311,14 +306,8 @@ img {
     padding: 1rem 2rem;
     border-radius: 2px;
 }
-
-.contact-phone {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
   
-  .phone-text {
+.phone-text {
     font-size: 2.4rem;
     color: var(--main-white);
     align-self: center;
@@ -332,4 +321,84 @@ img {
     text-shadow: 2px 2px 1px #1f1f1f; 
     cursor: pointer;                 
     transition: transform 0.3s ease-out, background 0.2s;
+}
+
+.copy-feedback { 
+  display: block; 
+  margin-top: 0.8rem; 
+  font-size: 1.6rem; 
+}
+
+/* --- CTA buttons --- */
+.btn-cta {
+    background: var(--main-red);
+    color: var(--main-white);
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    white-space: nowrap;
+}
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+.btn-cta:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Subtle outline style to pair with primary button in hero */
+.btn-cta-ghost {
+    background: transparent;
+    border: 2px solid var(--main-red);
+}
+
+/* Keep nav CTA aligned nicely even with centered list */
+.nav-list {
+    align-items: center;
+}
+.nav-cta {
+    margin-left: 0.5rem;
+}
+
+/* Group hero buttons on one line, wrap on small screens */
+.btn-group {
+    display: inline-flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --- Floating mobile CTA --- */
+.floating-cta {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.2rem;
+    padding: 1.2rem 2rem;
+    border-radius: 999px;
+    background: var(--main-red);
+    color: var(--main-white);
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    z-index: 999;
+    display: none; /* hidden by default, enabled on small screens */
+}
+.floating-cta:hover { 
+    transform: translateX(-50%) translateY(-2px); 
+}
+
+/* Show floating CTA on small screens only */
+@media (max-width: 28.75em) {
+    .floating-cta { display: inline-block; }
+}
+
+/* --- Screen-reader only utility --- */
+.sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;
 }
