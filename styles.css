@@ -402,3 +402,91 @@ img {
     overflow: hidden; clip: rect(0, 0, 0, 0);
     white-space: nowrap; border: 0;
 }
+
+/* Project card internals */
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.6rem 1.6rem 2rem;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 2.2rem;
+    padding: 0; /* override previous padding */
+    margin-bottom: 0.4rem;
+}
+
+.project-desc {
+    font-size: 1.6rem;
+    margin: 0.6rem 0 0.8rem;
+    color: #e8e8e8;
+}
+
+.project-tech {
+    font-size: 1.4rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 1.2rem;
+}
+
+/* Buttons row */
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+/* Secondary button that pairs with your .btn-primary */
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--main-white);
+    color: var(--main-white);
+    padding: 0.8rem 1.6rem;
+    font-size: 1.6rem;
+    border-radius: 2px;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    background: var(--main-white);
+    color: var(--main-gray);
+}
+
+/* Placeholder state for the in-progress card */
+.project--placeholder {
+    display: grid;
+    place-items: center;
+    min-height: 280px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.06) 10px,
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.02) 20px
+    );
+}
+
+.project-placeholder {
+    padding: 2rem;
+    text-align: center;
+}
+
+.project--placeholder .project-title {
+    text-align: center;
+}
+
+.project--placeholder .btn-secondary[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
