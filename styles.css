@@ -241,15 +241,6 @@ img {
     border-radius: 2px;
 }
 
-.code {
-    color: var(--main-gray);
-    transition:  color 0.3s ease-out;
-}
-
-.project:hover .code {
-    color: #ff7f50;
-}
-
 .project-image {
     height: calc(100% - 6.8rem);
     width: 100%;
@@ -259,6 +250,24 @@ img {
 .project-title {
     font-size: 2rem;
     padding:  2rem 0.5rem;
+}
+
+/* Badge row: small icons under the description */
+.badge-row {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0.6rem 0 0.8rem;
+}
+
+.badge-row img {
+  height: 20px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
 }
 
 /* contact section */
